@@ -3,8 +3,13 @@ using namespace std;
 void fibonacci(int cantidad);
 int main(){
     int cantidad;
-    cout<<"Ingrese la cantidad de numeros de la serie de fibonacci que desea: ";
-    cin>>cantidad;
+    do{
+        cout<<"Ingrese la cantidad de numeros de la serie de fibonacci que desea: ";
+        cin>>cantidad;
+        if(cantidad<=0){
+            cout<<"ERROR: Ingrese un numero positivo"<<endl;
+        } 
+    } while(cantidad<=0);
     fibonacci(cantidad);
     return 0;
 }

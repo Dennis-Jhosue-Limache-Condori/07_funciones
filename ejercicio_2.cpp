@@ -13,10 +13,15 @@ int main(){
         num2=num1;
         num1=aux;
     }
-    coci=cociente(num1, num2);
-    resi=residuo(num1, num2);
-    cout<<"Residuo: "<<resi<<endl;
-    cout<<"Cociente: "<<coci<<endl;
+    if(num2>0){
+        coci=cociente(num1, num2);
+        resi=residuo(num1, num2);
+        cout<<"Residuo: "<<resi<<endl;
+        cout<<"Cociente: "<<coci<<endl;
+    }
+    else {
+        cout<<"ERROR: El numero menor no es positivo";
+    }
     return 0;
 }
 

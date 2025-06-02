@@ -3,10 +3,20 @@ using namespace std;
 int divisor(int val1, int val2);
 int main(){
     int num1, num2, s1, s2, sum1, sum2;
-    cout<<"Ingrese un numero: ";
-    cin>>num1;
-    cout<<"Ingrese otro numero: ";
-    cin>>num2;
+    do{
+        cout<<"Ingrese un numero: ";
+        cin>>num1;
+        if(num1<=1){
+            cout<<"ERROR:Ingrese un numero mayor a 1"<<endl;
+        }
+    } while(num1<=1);
+    do{
+        cout<<"Ingrese otro numero: ";
+        cin>>num2;
+        if(num2<=1){
+            cout<<"ERROR:Ingrese un numero mayor a 1"<<endl;
+        }
+    } while(num2<=1);
     sum1=0;
     sum2=0;
     for(int i=1; i<num1; i=i+1){

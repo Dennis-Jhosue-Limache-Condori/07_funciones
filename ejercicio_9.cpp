@@ -4,8 +4,13 @@ int factorial(int val1);
 int main(){
     int n;
     float s;
-    cout<<"Ingrese un numero para realizar la serie: ";
-    cin>>n;
+    do{
+       cout<<"Ingrese un numero para realizar la serie: ";
+       cin>>n;
+       if(n<1){
+           cout<<"ERROR:Ingrese un numero mayor o igual a 1 para la sumatoria"<<endl;
+       }
+    } while(n<1);
     s=0;
     for(int i=1; i<=n; i=i+1){
         s=s+factorial(i)/(2.0*i);

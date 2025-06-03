@@ -4,8 +4,13 @@ bool primo(int val1);
 int main(){
     int num;
     bool valor;
-    cout<<"Ingrese el numero: ";
-    cin>>num;
+    do{
+        cout<<"Ingrese el numero: ";
+        cin>>num;
+        if(num<0){
+            cout<<"ERROR:Ingrese un numero a partir de 0 en adelante"<<endl;
+        }
+    } while(num<0);
     valor=primo(num);
     if(valor){
         cout<<num<<" es primo."<<endl;
